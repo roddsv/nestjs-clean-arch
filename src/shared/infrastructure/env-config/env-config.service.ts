@@ -10,6 +10,6 @@ export class EnvConfigService implements EnvConfig {
   }
 
   getNodeEnv(): string {
-    throw new Error('Method not implemented.')
+    return this.configService.get<string>('NODE_ENV')
   }
 }
